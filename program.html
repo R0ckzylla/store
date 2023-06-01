@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minha Loja</title>
+</head>
+<body>
+    <h1>Minha Loja</h1>
+    <h2>Produtos</h2>
+    <form action="add_product.py" method="post">
+        <label for="product_name">Nome do Produto:</label>
+        <input type="text" id="product_name" name="product_name" required>
+        <label for="product_price">Preço:</label>
+        <input type="number" id="product_price" name="product_price" required step="0.01">
+        <label for="product_description">Descrição:</label>
+        <textarea id="product_description" name="product_description"></textarea>
+        <input type="submit" value="Adicionar Produto">
+    </form>
+
+    <h2>Fornecedores</h2>
+    <form action="add_supplier.py" method="post">
+        <label for="supplier_name">Nome do Fornecedor:</label>
+        <input type="text" id="supplier_name" name="supplier_name" required>
+        <label for="supplier_address">Endereço:</label>
+        <input type="text" id="supplier_address" name="supplier_address" required>
+        <input type="submit" value="Adicionar Fornecedor">
+    </form>
+
+    <h2>Clientes</h2>
+    <form action="add_customer.py" method="post">
+        <label for="customer_name">Nome do Cliente:</label>
+        <input type="text" id="customer_name" name="customer_name" required>
+        <label for="customer_address">Endereço:</label>
+        <input type="text" id="customer_address" name="customer_address" required>
+        <input type="submit" value="Adicionar Cliente">
+    </form>
+
+    <h2>Encomendas</h2>
+    <form action="place_order.py" method="post">
+        <label for="customer_id">ID do Cliente:</label>
+        <input type="number" id="customer_id" name="customer_id" required>
+        <label for="product_id">ID do Produto:</label>
+        <input type="number" id="product_id" name="product_id" required>
+        <label for="quantity">Quantidade:</label>
+        <input type="number" id="quantity" name="quantity" required>
+        <input type="submit" value="Realizar Encomenda">
+    </form>
+
+    <h2>Pagamento de Encomendas</h2>
+    <form action="pay_order.py" method="post">
+        <label for="order_id">ID da Encomenda:</label>
+        <input type="number" id="order_id" name="order_id" required>
+        <input type="submit" value="Pagar Encomenda">
+    </form>
+</body>
+</html>
